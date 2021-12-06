@@ -1,4 +1,16 @@
 {
-  "components": {},
-  "dependencies": {}
+  "components": {
+    "visualizers": {
+      "PetriVis": {
+        "src": "panels/PetriVis/PetriVisPanel",
+        "title": "PetriVis",
+        "panel": "src/visualizers/panels/PetriVis",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/PetriVis"
+      }
+    }
+  },
+  "dependencies": {
+    "visualizers": {}
+  }
 }
