@@ -1,8 +1,15 @@
-# WDeStuP
-This repository is intended to server as a bootstrap for a fully docker based Design Studio development with WebGME.
-This way, the developer's computer can remain clean from installation (other than docker and required images) of any additional software.
-So, forget the hassle of installing and running mongoDB, or Nodejs+npm, or Python that all can be challenging based on your actual OS.
-Just enjoy the pure joy of creating a Design Studio that really boost the productivity of engineers!
+# Petri Nets
+Petri Nets are a type of model that allow users to represent complex distributed systems. The main componenets of a petri net are places (as circles), transisions (as rectangles), arcs (as directed arrows), and tokens (as black circles inside of places). The arcs connect places to transitions and vice-versa allowing for the tokens to move from place to place through arcs and transisions. In one time step, transisions with inPlaces (the places with arcs directed towards the transition) that have more than zero tokens are considered enabled and can be fired. When fired the amount of tokens in the inPlaces are decremented by one and the amount of tokens in the outPlaces (the places with arcs that are directed from the transision to them) are incremented by 1. If the number of enabled transitions is zero then we have either transported all the tokens to the sink place or we have reached deadlock. In either case we would have to reset the network to continue.
+
+## Use Cases
+There are multiple disciplines that use petri nets to model their system. One example is modelling the process of biological systems. Biologists use petri nets to study different ecological or evolutionary processes, experimenting with different modes of evolution. Also, this in distributed systems when we want to model the parallelism of a particular workflow and the splitting of various tasks. The data could then be visualized traveling down the workflow using the petri net. Furthermore, communication protocols can be modelled by petri nets by modelling the flow of a message through a network via network nodes.  
+
+A petri net can be divided into four types:  
+- Free Choice Petri Net (example in FreeChoice.ex): In this network, each transition has its own unique set of inPlaces, such that, the intersection of two inPlace sets of two different transitions is empty.
+- State Machine (example in StateMachine.ex): If every transision has one inPlace and one outPlace then this is considered a state machine
+- Marked Graph (example in MarkedGraph.ex): If every place has one inTransition and one outTransition then it is a Marked Graph
+- Workflow Net (example in WorkflowNet.ex): If the network has one source with no inTransitions, one destination with no outTransitions, and every place and transition is on a path from the source to the destination then this is workflow net.
+
 
 ## Initialization
 The easiest way to start using this project is to fork it in git. Alternatively, you can create your empty repository, copy the content and just rename all instances of 'WDeStuP' to your liking. Assuming you fork, you can start-up following this few simple steps:
