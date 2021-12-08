@@ -8,9 +8,22 @@
         "secondary": false,
         "widget": "src/visualizers/widgets/PetriVis"
       }
+    },
+    "seeds": {
+      "PetriNet": {
+        "src": "src/seeds/PetriNet"
+      }
+    },
+    "plugins": {
+      "PetriNetVerify": {
+        "src": "src/plugins/PetriNetVerify",
+        "test": "test/plugins/PetriNetVerify"
+      }
     }
   },
   "dependencies": {
-    "visualizers": {}
+    "visualizers": {},
+    "seeds": {},
+    "plugins": {}
   }
 }
