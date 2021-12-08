@@ -184,6 +184,10 @@
             });
         } else if (events && Object.keys(events).length === 0) {
             this._fireableEvents = null;
+            setTimeout(function(){
+                window.alert("Deadlock or All tokens reached destinations (No enabled transitions). Please reset the Petri net to continue.");
+            }, 550);
+            
         }
 
         this._displayToolbarItems();
