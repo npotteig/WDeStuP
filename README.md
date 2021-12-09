@@ -26,7 +26,7 @@ All of the following commands should be used from your main project directory (w
 - To **stop** the server just use `docker-compose stop`
 
 ## Steps to create a model
-Once you are in the localhost webpage for webgme, please create a new project using a seed. Choose the `PetriNetSeed` seed to start creating your petri net. Now you will see an examples folder that you can double click on to view a few examples of working petri nets. To create a new petri net, follow these steps:
+Once you are in the localhost webpage for webgme, please create a new project using a seed. Choose the `PetriNetSeed` seed, it should already be chosen as default, to start creating your petri net. Now you will see an examples folder that you can double click on to view a few examples of working petri nets. To create a new petri net, follow these steps:
 - Drag and drop a `PetriNet` object from the bottom left corner onto the screen
 - Now you can name the PetriNet by clicking on it and going to the bottom right corner to edit attributes
 - Double click on the PetriNet to start editing the model
