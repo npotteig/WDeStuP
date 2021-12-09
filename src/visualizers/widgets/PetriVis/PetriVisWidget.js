@@ -291,6 +291,9 @@
                 }
                 checkOneInPlace = true;
             });
+            if (Object.keys(pn.transitions[transId].inPlaces).length === 0){
+                enabledTrans = false
+            }
             if (enabledTrans){
                 pn.transitions[transId].joint.attr('body/stroke', 'blue');
                 enabledTransObj[transId] = pn.transitions[transId].name;
@@ -300,11 +303,11 @@
             }
             
         });
-        if (Object.keys(pn.transitions).length > 0 && checkOneInPlace && Object.keys(enabledTransObj).length === 0){
-            setTimeout(function(){
-                window.alert("Deadlock or All tokens reached destinations (No enabled transitions). Please reset the Petri net to continue.");
-            }, 550);
-        }
+        // if (Object.keys(pn.transitions).length > 0 && checkOneInPlace && Object.keys(enabledTransObj).length === 0){
+        //     setTimeout(function(){
+        //         window.alert("Deadlock or All tokens reached destinations (No enabled transitions). Please reset the Petri net to continue.");
+        //     }, 550);
+        // }
         // sm.states[sm.current].joint.attr('body/stroke', 'blue');
         pn.setFireableEvents(enabledTransObj);
     };
