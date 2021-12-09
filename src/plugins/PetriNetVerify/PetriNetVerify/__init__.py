@@ -114,6 +114,13 @@ class PetriNetVerify(PluginBase):
                         bad_place = False
                 if bad_place:
                     bad_work = True
+            for t in transition_graph.keys():
+                bad_trans = True
+                for pth in pths:
+                    if t in pth:
+                        bad_trans = False
+                if bad_trans:
+                    bad_work = True
             
         if not bad_free:
             self.send_notification("Your Petri Net is a Free-choice petri net")
