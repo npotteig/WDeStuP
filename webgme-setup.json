@@ -12,6 +12,9 @@
     "seeds": {
       "PetriNet": {
         "src": "src/seeds/PetriNet"
+      },
+      "PetriNetSeed": {
+        "src": "src/seeds/PetriNetSeed"
       }
     },
     "plugins": {
