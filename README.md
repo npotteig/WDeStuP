@@ -38,9 +38,10 @@ To simulate the model, click on the `PetriVis` tab right under Composition in th
 A few visual notes to go over:
 - The numbers inside each place are the number of tokens it currently has
 - All enabled transitions are highlighted blue
+- If your petri net is in deadlock or all nodes have completed you will receive a message to reset your petri net. If your model does not have any enabled transitions initially you will need to go back to composition to edit the model. Please refresh the page once you go back to the composition tab, otherwise you will keep receiving a deadlock message.  
 
 Now there will be three buttons in the toolbar at the top to take notice of:
 - The question mark button will tell you what type of PetriNet yours falls into. It will send a notification to tell you this. It could be multiple depending on your formulation.
 - The rewind button will reset your network and tokens. This is useful in the case that you reach deadlock/completion (A message will appear telling you that you have reached this state) or you just want to go back to the beginning.
 - The play button will allow you to simulated firing and enabled transition when there is only one in your network. If there are multiple enabled transitions, then a dropdown menu will appear at that place where you can click which transition to fire based on its name.
-![image](https://user-images.githubusercontent.com/39629388/145314205-33cfe1cf-3485-4b11-9b22-e4c5a9209064.png)
+
